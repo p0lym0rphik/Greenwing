@@ -2,6 +2,12 @@
 
 <hr>
 
+Greenwing is a kanboard beautify theme with modern design.
+
+What is Kanboard? Kanboard is project management software that focuses on the Kanban methodology.
+You can access to Kanboard repository following this link:
+https://github.com/kanboard/kanboard
+
 ## Screenshots
 
 ![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/DashboardView.png)
