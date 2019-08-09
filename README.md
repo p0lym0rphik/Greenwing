@@ -37,4 +37,3 @@ Download zip and decompress in plugins/Greenwing folder
 ## Reporting Issues
 
 You can create issue for any bug: https://github.com/Confexion/Greenwing
-
