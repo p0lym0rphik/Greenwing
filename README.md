@@ -14,7 +14,7 @@ https://github.com/kanboard/kanboard
 &nbsp;&nbsp;
 ![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/ListingTasks.png)
 &nbsp;&nbsp;
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/BoardView.png)
+![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/ViewBoard.png)
 &nbsp;&nbsp;
 ![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/AddTask.png)
 &nbsp;&nbsp;
