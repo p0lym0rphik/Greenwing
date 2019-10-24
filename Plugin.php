@@ -5,7 +5,16 @@ namespace Kanboard\Plugin\Greenwing;
 use Kanboard\Core\Plugin\Base;
 
 class Plugin extends Base {
+
 	public function initialize() {
+
+		global $GreenwingConfig;
+
+		require_once('plugins/Greenwing/config.php');
+
+		if (isset($GreenwingConfig['logo'])) {
+			$this->template->setTemplateOverride('header/title', 'Greenwing:logo');
+		}
 
 		$this->template->setTemplateOverride( 'board/table_container', 'Greenwing:table_container' );
 		$this->template->setTemplateOverride( 'task/details', 'Greenwing:task_details' );
@@ -29,6 +38,8 @@ class Plugin extends Base {
 		$this->template->setTemplateOverride( 'header/user_dropdown', 'Greenwing:user_dropdown' );
 		$this->template->setTemplateOverride( 'task_list/task_avatars', 'Greenwing:task_avatars' );
 		$this->template->setTemplateOverride( 'user_view/profile', 'Greenwing:profile' );
+		$this->template->setTemplateOverride( 'auth/index', 'Greenwing:login' );
+		$this->template->setTemplateOverride( 'password_reset/create', 'Greenwing:password_reset' );
 
 		$this->container['colorModel'] = $this->container->factory( function ( $c ) {
 			return new ColorModel( $c );
@@ -40,6 +51,7 @@ class Plugin extends Base {
 
 		$this->helper->register( 'myTaskHelper', '\Kanboard\Plugin\Greenwing\MyTaskHelper' );
 		$this->helper->register( 'myAvatarHelper', '\Kanboard\Plugin\Greenwing\MyAvatarHelper' );
+		$this->helper->register( 'myFormHelper', '\Kanboard\Plugin\Greenwing\MyFormHelper' );
 
 		$this->setContentSecurityPolicy( array( 'font-src' => "'self' fonts.gstatic.com" ) );
 

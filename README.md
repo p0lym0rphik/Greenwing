@@ -14,7 +14,7 @@ https://github.com/kanboard/kanboard
 &nbsp;&nbsp;
 ![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/ListingTasks.png)
 &nbsp;&nbsp;
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/ViewBoard.png)
+![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/BoardView.png)
 &nbsp;&nbsp;
 ![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/AddTask.png)
 &nbsp;&nbsp;
@@ -26,6 +26,12 @@ https://github.com/kanboard/kanboard
 * Confexion
 * Licence MIT
 
+## Features
+
+* Beautify theme
+* Custom KB logo (ref Config.php)
+* Compatibility with others plugins (create issue to ask for new plugins compatibility)
+
 ## Requirements
 
 Kanboard >= v1.2.9
@@ -36,4 +42,5 @@ Download zip and decompress in plugins/Greenwing folder
 
 ## Reporting Issues
 
-You can create issue for any bug: https://github.com/Confexion/Greenwing
+You can create issue for any bug: https://github.com/Confexion/Greenwing/issues/new
+
