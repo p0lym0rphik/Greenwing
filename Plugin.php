@@ -10,7 +10,7 @@ class Plugin extends Base {
 
 		global $GreenwingConfig;
 
-		require_once('plugins/Greenwing/config.php');
+		require_once('plugins/Greenwing/Config.php');
 
 		if (isset($GreenwingConfig['logo'])) {
 			$this->template->setTemplateOverride('header/title', 'Greenwing:logo');
