@@ -1,4 +1,4 @@
-<div class="project-header <?= $filters['plugin'] ? 'color-' : '' ?><?= $filters['plugin'] ? $filters['plugin']['task']['color_id'] : '' ?>">
+<div class="project-header <?= $filters['plugin'] && gettype($filters['plugin']) == 'array' ? 'color-' : '' ?><?= $filters['plugin'] && gettype($filters['plugin']) == 'array' ? $filters['plugin']['task']['color_id'] : '' ?>">
     <?php $filters['plugin'] = '' ?>
 
     <?= $this->hook->render('template:project:header:before', array('project' => $project)) ?>
@@ -15,6 +15,7 @@
             'filters' => $filters,
             'custom_filters_list' => isset($custom_filters_list) ? $custom_filters_list : array(),
             'users_list' => isset($users_list) ? $users_list : array(),
+            'colors_list' => isset($colors_list) ? $colors_list : array(),
             'categories_list' => isset($categories_list) ? $categories_list : array(),
         )) ?>
     </div>

@@ -40,6 +40,8 @@ class Plugin extends Base {
 		$this->template->setTemplateOverride( 'user_view/profile', 'Greenwing:profile' );
 		$this->template->setTemplateOverride( 'auth/index', 'Greenwing:login' );
 		$this->template->setTemplateOverride( 'password_reset/create', 'Greenwing:password_reset' );
+		$this->template->setTemplateOverride( 'project_header/search', 'Greenwing:search' );
+		$this->template->setTemplateOverride( 'board/view_private', 'Greenwing:view_private' );
 
 		$this->container['colorModel'] = $this->container->factory( function ( $c ) {
 			return new ColorModel( $c );
@@ -52,6 +54,7 @@ class Plugin extends Base {
 		$this->helper->register( 'myTaskHelper', '\Kanboard\Plugin\Greenwing\MyTaskHelper' );
 		$this->helper->register( 'myAvatarHelper', '\Kanboard\Plugin\Greenwing\MyAvatarHelper' );
 		$this->helper->register( 'myFormHelper', '\Kanboard\Plugin\Greenwing\MyFormHelper' );
+		$this->helper->register( 'myProjectHeaderHelper', '\Kanboard\Plugin\Greenwing\MyProjectHeaderHelper' );
 
 		$this->setContentSecurityPolicy( array( 'font-src' => "'self' fonts.gstatic.com" ) );
 

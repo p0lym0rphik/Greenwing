@@ -66,6 +66,29 @@ class ColorModel extends BaseColorModel
     );
 
     /**
+     * Get available colors
+     *
+     * @access public
+     * @param  bool $prepend
+     * @return array
+     */
+    public function getList($prepend = false, $defaultLanguage = false)
+    {
+        $listing = $prepend ? array('' => t('All colors')) : array();
+        foreach ($this->default_colors as $color_id => $color) {
+            if ($defaultLanguage) {
+                $listing[$color_id] = $color['name'];
+            } else {
+                $listing[$color_id] = t($color['name']);
+            }
+        }
+
+        $this->hook->reference('model:color:get-list', $listing);
+
+        return $listing;
+    }
+
+    /**
      * Get CSS stylesheet of all colors
      *
      * @access public
