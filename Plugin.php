@@ -42,6 +42,8 @@ class Plugin extends Base {
 		$this->template->setTemplateOverride( 'password_reset/create', 'Greenwing:password_reset' );
 		$this->template->setTemplateOverride( 'project_header/search', 'Greenwing:search' );
 		$this->template->setTemplateOverride( 'board/view_private', 'Greenwing:view_private' );
+		$this->template->setTemplateOverride( 'project_header/views', 'Greenwing:project_header/views' );		
+		$this->template->setTemplateOverride( 'plugin/show', 'Greenwing:plugin/show' );		
 
 		$this->container['colorModel'] = $this->container->factory( function ( $c ) {
 			return new ColorModel( $c );
@@ -55,6 +57,7 @@ class Plugin extends Base {
 		$this->helper->register( 'myAvatarHelper', '\Kanboard\Plugin\Greenwing\MyAvatarHelper' );
 		$this->helper->register( 'myFormHelper', '\Kanboard\Plugin\Greenwing\MyFormHelper' );
 		$this->helper->register( 'myProjectHeaderHelper', '\Kanboard\Plugin\Greenwing\MyProjectHeaderHelper' );
+		$this->helper->register( 'myUrlHelper', '\Kanboard\Plugin\Greenwing\MyUrlHelper' );
 
 		$this->setContentSecurityPolicy( array( 'font-src' => "'self' fonts.gstatic.com" ) );
 
@@ -72,11 +75,11 @@ class Plugin extends Base {
 	}
 
 	public function getPluginVersion() {
-		return '1.0.0';
+		return '1.2.0';
 	}
 
 	public function getPluginHomepage() {
-		return 'https://github.com/.../...';
+		return 'https://github.com/Confexion/Greenwing';
 	}
 
 	public function getPluginDescription() {

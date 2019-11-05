@@ -51,8 +51,14 @@
 
             <?= $this->hook->render('template:board:private:task:before-title', array('task' => $task)) ?>
 
+            <div class="task-board-title">
+                <?= $this->url->link($this->text->e($task['title']), 'TaskViewController', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
+            </div>
+            <?= $this->hook->render('template:board:private:task:after-title', array('task' => $task)) ?>
+
             <?php if (! empty($task['category_id'])): ?>
             <div class="task-board-category-container task-board-category-container-color">
+                <h4><?= t('Category'); ?></h4>
                 <span class="task-board-category category-<?= $this->text->e($task['category_name']) ?> <?= $task['category_color_id'] ? "color-{$task['category_color_id']}" : '' ?>">
                     <?php if ($not_editable): ?>
                         <?= $this->text->e($task['category_name']) ?>
@@ -73,18 +79,24 @@
                 </span>
             </div>
             <?php endif ?>
+
+            <?php if (! empty($task['tags'])): ?>
+                <div class="task-tags">
+                    <h4><?= t('Tags'); ?></h4>
+                    <ul>
+                    <?php foreach ($task['tags'] as $tag): ?>
+                        <li class="task-tag <?= $tag['color_id'] ? "color-{$tag['color_id']}" : '' ?>"><?= $this->text->e($tag['name']) ?></li>
+                    <?php endforeach ?>
+                    </ul>
+                </div>
+            <?php endif ?>
             
-            <div class="task-board-title">
-                <?= $this->url->link($this->text->e($task['title']), 'TaskViewController', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
-            </div>
-            <?= $this->hook->render('template:board:private:task:after-title', array('task' => $task)) ?>
 
             <?= $this->render('board/task_footer', array(
                 'task' => $task,
                 'not_editable' => $not_editable,
                 'project' => $project,
             )) ?>
-            <!-- <?= $this->render('board/task_avatar', array('task' => $task)) ?> -->
 
         </div>
     <?php endif ?>
