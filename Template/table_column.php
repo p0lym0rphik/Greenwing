@@ -9,7 +9,7 @@
 
         <!-- column in collapsed mode -->
         <div class="board-column-collapsed">
-            <div class="btn-circle btn-default btn-sm">
+            <div class="btn btn-circle btn-sm">
                 <a href="#" class="dropdown-menu board-toggle-column-view" data-column-id="<?= $column['id'] ?>">
                     <i class="fa fa-expand"></i>
                 </a>
@@ -40,7 +40,7 @@
                 <?php endif ?>
 
                 <?php if (!$not_editable): ?>
-                    <span class="dropdown btn-default btn-circle btn-sm">
+                    <span class="dropdown btn btn-circle btn-sm">
                         <a href="#" class="dropdown-menu dots-menu">
                             <i class="dots-menu__icon fa fa-ellipsis-v"></i>
                         </a>

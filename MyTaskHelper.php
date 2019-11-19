@@ -8,7 +8,7 @@ class MyTaskHelper extends Base
 {
     public function getNewBoardTaskButton(array $swimlane, array $column)
     {
-        $html = '<div class="board-add-icon btn-primary btn-circle btn-sm">';
+        $html = '<div class="board-add-icon btn btn-blue btn-circle btn-sm">';
         $providers = $this->externalTaskManager->getProviders();
 
         if (empty($providers)) {
