@@ -1,0 +1,105 @@
+@mixin button(
+  $bg-color,
+  $text-color,
+  $default-border-color,
+  $bg-color-hover,
+  $text-color-hover,
+  $default-border-color-hover
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  border-color: $default-border-color;
+
+  i,
+  &:before {
+    transition: color 0.3s;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($bg-color, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-color-hover;
+    color: $text-color-hover;
+    border-color: $default-border-color-hover;
+
+    i,
+    &:before {
+      color: $text-color-hover;
+    }
+  }
+}
+
+.btn,
+.form-actions > a {
+  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+  border: 0.0625rem solid;
+  display: inline-block;
+  transition: color 0.6s, background-color 0.6s;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1rem;
+  width: auto;
+  text-decoration: none;
+  font-family: "montserrat", sans-serif;
+  transition: all 0.3s;
+
+  @include button(
+    rgba($primary-color, 0.1),
+    $primary-color,
+    rgba($primary-color, 0.1),
+    rgba($primary-color, 0.2),
+    $primary-color,
+    rgba($primary-color, 0.2)
+  );
+
+  &.btn-blue {
+    @include button(
+      $primary-color,
+      white,
+      $primary-color,
+      darken($primary-color, 10),
+      white,
+      darken($primary-color, 10)
+    );
+  }
+
+  &.btn-red {
+    @include button(
+      $danger-color,
+      white,
+      $danger-color,
+      darken($danger-color, 10),
+      white,
+      darken($danger-color, 10)
+    );
+  }
+}
+
+.btn-circle {
+  $size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  line-height: $size;
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &.btn-sm {
+    $size: 26px;
+    width: $size;
+    height: $size;
+    line-height: $size;
+  }
+}

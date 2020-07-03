@@ -10,16 +10,9 @@ https://github.com/kanboard/kanboard
 
 ## Screenshots
 
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/DashboardView.png)
-&nbsp;&nbsp;
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/ListingTasks.png)
-&nbsp;&nbsp;
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/BoardView.png)
-&nbsp;&nbsp;
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/AddTask.png)
-&nbsp;&nbsp;
-![alt text](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/EditProfile.png)
-
+![Mockup 2](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/Mockup1.png)
+&nbsp;
+![Mockup 2](https://ctwwwmedias.blob.core.windows.net/default/github/greenwing/Mockup2.png)
 
 ## Author
 
@@ -31,6 +24,7 @@ https://github.com/kanboard/kanboard
 * Beautify theme
 * Custom KB logo (ref Config.php)
 * Compatibility with others plugins (create issue to ask for new plugins compatibility)
+* You can customize and edit this theme using tutorial below
 
 ## Requirements
 
@@ -39,6 +33,26 @@ Kanboard >= v1.2.9
 ## Installation guide
 
 Download zip and decompress in plugins/Greenwing folder
+
+## Customize guide
+
+Check for node, npm, and npx installed with node --version, npm --version and npx --version
+
+Install gulp globally with npm install --global gulp
+
+Check gulp install with gulp --version
+
+Go to kanboard/plugins/Greenwing folder
+
+Copy all files from edit folder to Greenwing root folder
+
+Run npm install or yarn install
+
+Edit gulpfile.js host line 11 with your local kanboard link
+
+Run gulp watch in Greenwing root folder
+
+Now, you can edit scss files in Sass folder to customize theme.
 
 ## Reporting Issues
 

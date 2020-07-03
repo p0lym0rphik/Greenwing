@@ -1,0 +1,48 @@
+#task-summary {
+  .task-summary-title {
+    display: flex;
+
+    img {
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+    }
+
+    h2 {
+      color: $default-color;
+      margin-bottom: 15px;
+    }
+  }
+  .task-summary-container {
+    border: 1px solid $default-border-color;
+    background-color: white;
+    padding: 15px;
+
+    .task-summary-columns {
+      margin: 0 -15px;
+
+      .task-summary-column {
+        color: inherit;
+        padding: 0 15px;
+      }
+
+      li {
+        padding-bottom: 5px;
+      }
+
+      span {
+        color: $default-color;
+      }
+    }
+
+    .task-tags {
+      margin-top: 0;
+
+      li {
+        border-style: none;
+        margin: 0 6px 6px 0;
+        padding: 3px 6px;
+      }
+    }
+  }
+}

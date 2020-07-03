@@ -1,0 +1,18 @@
+.accordion-section {
+  margin-bottom: 15px;
+
+  .accordion-title {
+    margin-top: 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .buttons-header {
+    i {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+#dropdown {
+  .dropdown-submenu-open {
+    border-color: $default-border-color;
+
+    .color-picker-square {
+      padding-right: 10px;
+      border-radius: 50%;
+    }
+
+    .fa {
+      display: none;
+    }
+
+    a,
+    i {
+      color: $default-color;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      border-color: $default-bg-color;
+
+      strong {
+        justify-content: center;
+      }
+
+      &:not(.no-hover) {
+        &:hover,
+        &:focus {
+          color: inherit;
+          background-color: $default-bg-color-2;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-menu-link-text,
+.dropdown-menu-link-icon {
+  color: inherit;
+}

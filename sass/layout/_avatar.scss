@@ -1,0 +1,46 @@
+.avatar {
+  &.avatar-inline {
+    margin-right: 0;
+  }
+
+  &.avatar-20 {
+    .avatar-letter {
+      line-height: 20px;
+      width: 20px;
+      max-width: 20px;
+      font-size: 0.6em;
+    }
+  }
+
+  &.avatar-38 {
+    .avatar-letter {
+      line-height: 38px;
+      width: 38px;
+      max-width: 38px;
+      font-size: 0.9em;
+    }
+  }
+
+  &.avatar-48 {
+    .avatar-letter {
+      line-height: 48px;
+      width: 48px;
+      max-width: 48px;
+      font-size: 1.2em;
+    }
+  }
+
+  img,
+  div {
+    border-radius: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+#user-section
+  .avatar.avatar-48
+  img[src^="/?controller=AvatarFileController&action=image"] {
+  margin-left: 5rem;
+}

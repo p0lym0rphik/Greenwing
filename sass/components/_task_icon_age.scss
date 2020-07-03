@@ -1,0 +1,16 @@
+.task-board span.task-icon-age-total,
+.task-board span.task-icon-age-column {
+  border-color: $default-color;
+}
+
+span {
+  &.task-icon-age-total,
+  &.task-icon-age-column {
+    padding: 2px 5px;
+    border-color: $default-color;
+  }
+
+  &.task-icon-age-column {
+    margin-left: -3px;
+  }
+}

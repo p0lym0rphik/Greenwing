@@ -1,0 +1,131 @@
+//Compatibility with Calendar plugin
+.js-calendar.fc.fc-unthemed.fc-ltr-rendered {
+    padding-top: 130px;
+
+    table {
+        margin-bottom: 0;
+    }   
+}
+#modal-content {
+    .js-calendar.fc.fc-unthemed.fc-ltr-rendered {
+        padding: 0;
+        .fc-toolbar.fc-header-toolbar {
+            position: sticky;
+            top: 31px;
+            z-index: 10;
+            background-color: $default-bg-color;
+            padding: 0 15px 15px 15px;
+        }
+
+        .fc-view {
+            padding: 0 15px 15px 15px;
+
+            table {
+                margin-bottom: 0;
+            }   
+        }
+    }
+}
+
+
+//Compatibility with Gantt plugin
+.page #main .menu-inline {
+  padding-top: 130px;
+}
+
+.menu-inline ~#gantt-chart {
+  margin-top: 10px;
+}
+#gantt-chart {
+  margin-bottom: 10px;
+  margin-top: 110px;
+
+  .ganttview-vtheader-series-name:last-child {
+    border-bottom: 1px solid #999;
+  }
+
+  .ganttview-block-text {
+      height: 100%;
+  }
+}
+
+div.ganttview-hzheader-month,
+div.ganttview-hzheader-day {
+    box-sizing: content-box;
+}
+
+//Compatibility with Wiki plugin
+.clearfix {
+    padding-top: 140px;
+
+  .sidebar.column.list {
+    width: unset;
+  }
+  .column.content {
+    a {
+      i {
+        margin-right: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.table-list-row {
+    h1 {
+        padding: 5px;
+    }
+}
+li.wikipage {
+  min-width: 150px;
+}
+
+//Compatibility with task2pdf plugin
+//Compatibility with groupassign plugin
+//Compatibility with markdownplus plugin
+//Compatibility with calendar plugin
+//Compatibility with gantt plugin
+input:not(.select2-search__field):not([type="checkbox"]):not([name="notifications_filter"]):not([name="positionChoice"]),
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="text"]:not(.input-addon-field),
+textarea,
+select {
+  &[name="task2pdf_cjk"],
+  &[name="enable_am_group_management"],
+  &[name="unicode_shortcode"],
+  &[name="calendar_project_tasks"],
+  &[name="calendar_user_tasks"],
+  &[name="gantt_task_sort"] {
+    width: auto;
+    margin: 0 10px 0 0;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+//Compatibility with CardPushDate plugin
+.task-board-header {
+  .task-board-assignee,
+  .task-board-avatars {
+    display: none;
+  }
+}
+
+//Compatibility with DueDate plugin
+input[name=DueDate_Board_Sort_Method],
+input[name=DueDate_Board_Dividers] {
+  width: auto !important;
+  margin-bottom: 0 !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+.task-date-overdue {
+  color: #b94a48 !important;
+}

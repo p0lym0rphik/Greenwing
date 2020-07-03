@@ -1,0 +1,20 @@
+#tooltip-container {
+  z-index: 10;
+  box-shadow: 0 3px 20px rgba($primary-color, 0.2);
+  border: 1px solid $default-border-color;
+  padding: 6px 10px;
+  font-size: 14px;
+
+  &:before {
+    content: "";
+    height: 17px;
+    width: 100%;
+    position: absolute;
+    top: -17px;
+    left: 0;
+  }
+
+  table {
+    margin-bottom: 0;
+  }
+}

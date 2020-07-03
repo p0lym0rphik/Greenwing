@@ -1,0 +1,284 @@
+#modal-box {
+  .alert {
+    margin: 15px;
+    border-radius: 5px;
+  }
+
+  .js-confirm-buttons-rendered {
+    padding: 15px;
+    border-top: 1px solid $default-border-color;
+    display: flex;
+
+    .form-actions {
+      padding: 0;
+      margin-left: auto;
+    }
+  }
+
+  #modal-close-button {
+    @include button(
+      $primary-color,
+      white,
+      $primary-color,
+      darken($primary-color, 10),
+      white,
+      darken($primary-color, 10)
+    );
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: 1350px) {
+    width: 1140px !important;
+  }
+
+  #modal-header {
+    position: sticky;
+    z-index: 2;
+    top: 15px;
+    padding-right: 15px;
+  }
+
+  #modal-content {
+    padding: 0;
+
+    .page-header {
+      ul {
+        margin: 0 0 -15px -15px;
+        width: 1140px;
+        border-bottom: 0 none;
+        border-top: 1px solid $default-border-color;
+      }
+    }
+    form {
+      padding: 15px;
+
+      #form-title {
+        width: 97%;
+        margin-right: 10px;
+        display: inline-block;
+
+        @media (max-width: 767px) {
+          width: 94%;
+        }
+      }
+      .form-errors li {
+        padding-bottom: 15px;
+      }
+      .form-required {
+        display: inline-block;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      select[name="owner_id"] {
+        margin-bottom: 0.4rem;
+      }
+
+      select[id="form-owner_id"] {
+        width: 80%;
+        display: inline-block;
+      }
+
+      select[id="form-user_id"] {
+        width: 94%;
+        display: inline-block;
+        margin-right: 5px;
+
+        & ~ small {
+          display: contents;
+
+          a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      small {
+        float: right;
+        line-height: 35px;
+        vertical-align: middle;
+      }
+
+      .assign-me {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      .form-numeric {
+        display: inline;
+        width: 40%;
+        margin-right: 8px;
+      }
+
+      input#form-name,
+      input#form-label,
+      input#form-username,
+      input#form-text,
+      input#form-filter,
+      input#form-role,
+      input#form-emails,
+      input#form-subject {
+        width: 97%;
+        display: inline;
+        margin-right: 10px;
+
+        @media (max-width: 767px) {
+          width: 94%;
+        }
+
+        ~ input#form-name {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+
+      &[id="project-creation-form"],
+      &[action="/?controller=GroupCreationController&action=save"] {
+        #form-name {
+          width: 98%;
+          display: inline;
+          margin-right: 10px;
+
+          @media (max-width: 767px) {
+            width: 94%;
+          }
+        }
+      }
+
+      &[action^="/?controller=TaskDuplicationController&action=move"],
+      &[action^="/?controller=TaskDuplicationController&action=copy"] {
+        .select-dropdown-input-container {
+          border: 1px solid $default-border-color;
+          margin-bottom: 1rem;
+
+          input.select-dropdown-input::placeholder {
+            color: $default-color;
+          }
+        }
+      }
+
+      &[action^="/?controller=TaskMailController&action=send"] {
+        input {
+          width: 98%;
+          display: inline;
+          margin-right: 10px;
+
+          @media (max-width: 767px) {
+            width: 94%;
+          }
+        }
+      }
+
+      .js-project-creation-options {
+        margin-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+        padding-top: 0;
+        border-left: 0 none;
+        padding-left: 0;
+
+        .alert {
+          margin-bottom: 10px;
+          margin-left: 0;
+        }
+      }
+
+      &[action^="/?controller=TaskDuplicationController&action="] {
+        select[id="form-owner_id"] {
+          width: 100%;
+        }
+      }
+    }
+
+    .page-header {
+      padding: 20px 15px;
+      background-color: $default-bg-color;
+      border-bottom: 1px solid $default-border-color;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      margin: -30px 0 0;
+
+      h2 {
+        border-bottom: 0;
+        padding: 0;
+        font-size: 20px;
+      }
+    }
+
+    .sidebar-container {
+      margin-top: 20px;
+
+      .sidebar {
+        max-height: 350px;
+        top: 120px;
+
+        @media (max-width: 767px) {
+          top: 0;
+        }
+
+        li {
+          margin-left: 15px;
+        }
+      }
+
+      .sidebar-content {
+        table {
+          @media (max-width: 767px) {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .js-file-upload-rendered ~ .js-submit-buttons-rendered {
+    padding: 15px;
+    margin: 0;
+
+    .form-actions {
+      padding: 0;
+      text-align: right;
+    }
+  }
+
+  .js-file-upload-rendered {
+    .alert ~ button {
+      margin-left: 15px;
+    }
+  }
+
+  .js-submit-buttons-rendered {
+    padding: 15px;
+    margin: 0 -15px -15px -15px;
+
+    .form-actions {
+      padding: 0;
+      text-align: right;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      .btn {
+        margin-left: 10px;
+      }
+
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+}

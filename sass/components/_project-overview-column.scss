@@ -1,0 +1,49 @@
+.project-overview-columns {
+  margin: 0 -10px;
+  align-items: initial;
+  justify-content: initial;
+
+  .project-overview-column {
+    text-align: center;
+    margin: 0 10px 15px;
+    padding: 0;
+    display: flex;
+    background-color: white;
+    padding: 25px 15px;
+    border-radius: 5px;
+    border: 1px solid $default-border-color;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      small,
+      strong {
+        color: white;
+      }
+    }
+
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+
+    small {
+      color: rgba($primary-color, 0.6);
+      margin-bottom: 5px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    strong {
+      color: $primary-color;
+      font-size: 40px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+  }
+}

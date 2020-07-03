@@ -1,0 +1,33 @@
+a {
+  .fa {
+    color: inherit;
+    padding-right: 0;
+    width: auto;
+  }
+}
+
+.fa.fa-cog,
+.fa.fa-th {
+  color: $default-color;
+
+  &:hover,
+  &:focus {
+    color: black;
+  }
+}
+
+.fa-fa-caret-down {
+  color: $default-color;
+}
+
+.fa.fa-arrows-alt {
+  color: $default-color;
+}
+
+.fa.fa-fw.fa-trash-o {
+  margin-right: 3px;
+}
+
+.tooltip .fa-info-circle {
+  color: inherit;
+}

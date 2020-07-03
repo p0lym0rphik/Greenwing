@@ -1,0 +1,152 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  tr th,
+  tr td {
+    border-top: 0 none;
+    border-left: 1px solid $default-border-color;
+    border-bottom: 1px solid $default-border-color;
+    padding: 10px;
+    border-right: 0 none;
+
+    &:last-child {
+      border-right: 1px solid $default-border-color;
+    }
+  }
+
+  tr th:first-child,
+  tr td:first-child {
+    border-left: 1px solid $default-border-color;
+  }
+
+  tr th {
+    background-color: $default-bg-color-2;
+    border-top: 1px solid $default-border-color;
+    text-align: left;
+  }
+
+  tr:first-child th:first-child {
+    border-top-left-radius: 5px;
+  }
+
+  tr:first-child th:last-child {
+    border-top-right-radius: 5px;
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+  }
+
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+  }
+
+  &.table-small {
+    th {
+      padding: 0.8rem 0 0.8rem 0.2rem;
+    }
+
+    tr {
+      td {
+        padding: 0.8rem 0 0.8rem 0.2rem;
+
+        a {
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: black;
+          }
+
+          i {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &.table-scrolling {
+    th {
+      .dropdown-menu {
+        .fa.fa-cog {
+          padding-right: 3px;
+        }
+      }
+    }
+
+    td {
+      vertical-align: middle;
+
+      select {
+        margin-bottom: 0;
+      }
+
+      span:not(:last-child) {
+        padding-right: 5px;
+        border-right: 1px solid $default-text-color;
+      }
+    }
+  }
+
+  th {
+    padding: 0.8rem 0.5rem;
+
+    a {
+      color: inherit;
+    }
+
+    a:hover,
+    &:focus {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  td {
+    padding: 0.5rem;
+
+    .dropdown a i,
+    i {
+      padding-right: 3px;
+    }
+
+    a.dropdown-menu i {
+      color: $default-color;
+    }
+
+    .markdown p {
+      margin-bottom: 0;
+    }
+  }
+
+  &.table-striped.table-scrolling {
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: black;
+      }
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.table-striped.table-scrolling td a i {
+  padding-right: 3px;
+}
+
+.subtasks-table.table-striped.table-scrolling a {
+  color: $default-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: black;
+  }
+}

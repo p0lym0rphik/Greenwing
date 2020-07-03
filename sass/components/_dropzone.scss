@@ -1,0 +1,39 @@
+#file-dropzone,
+#screenshot-zone {
+  margin: 15px 15px 0 15px;
+  width: auto;
+  border-color: #ccdcf3;
+
+  #file-dropzone-inner, #screenshot-inner {
+    color: #a1badd;
+
+    a {
+      text-decoration: none;
+  
+      &:hover,
+      &:focus {
+        color: black;
+      }
+    }
+  
+    #file-list {
+      li {
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        border-bottom: 1px solid $default-border-color;
+  
+        i, progress {
+          margin-right: 8px;
+        }
+  
+        .file-error {
+          margin-top: 5px;
+        }
+  
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

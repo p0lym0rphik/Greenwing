@@ -1,0 +1,48 @@
+.text-editor {
+  margin-top: 0;
+
+  .text-editor-preview-area {
+    padding: 0.375rem 0.75rem;
+    border: 1px solid $default-border-color;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: initial;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: inherit;
+  }
+}
+
+.text-editor-toolbar {
+  padding: 15px;
+  border-top: 1px solid $default-border-color;
+  border-left: 1px solid $default-border-color;
+  border-right: 1px solid $default-border-color;
+  background-color: $default-bg-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  a {
+    font-size: 0.8rem;
+    transition: color 0.3s;
+    padding: 5px;
+    color: $default-color;
+
+    &:hover,
+    &:focus {
+      color: black;
+    }
+
+    &:first-child,
+    &:nth-child(4) {
+      padding-right: 15px;
+      border-right: 1px solid $default-border-color;
+      margin-right: 15px;
+    }
+  }
+}

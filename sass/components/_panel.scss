@@ -1,0 +1,49 @@
+.panel {
+  border-color: $default-border-color;
+  background-color: white;
+  color: inherit;
+  padding: 15px;
+
+  .no-bullet {
+    li:not(:last-child) {
+      margin-bottom: 3px;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    a {
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .form-inline {
+    label {
+      display: inherit;
+    }
+
+    select {
+      margin-bottom: 1rem;
+    }
+  }
+
+  li {
+    a {
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+form + .panel {
+  margin: 15px;
+
+  .margin-top {
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+}

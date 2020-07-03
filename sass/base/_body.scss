@@ -1,0 +1,86 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $default-bg-color;
+  color: $default-color;
+}
+
+.page {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 15px;
+}
+
+a {
+  color: #36c;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: black;
+  }
+
+  &.user-mention-link {
+    color: #ff006c;
+    font-weight: 600;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: darken(#ff006c, 10);
+    }
+  }
+}
+
+hr {
+  border-color: $default-border-color;
+  border-bottom: 0 none;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+#main.user-profile-container {
+  padding-top: 60px;
+}
+
+#board-container,
+.page .project-header ~ .table-list,
+#main .project-header ~ .sidebar-container,
+.page #main .project-overview-columns {
+  padding-top: 130px;
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+#main > section.sidebar-container,
+.page .page-header ~ .margin-bottom {
+  padding-top: 110px;
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+
+  &[id="config-section"] {
+    padding-top: 60px;
+
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
+
+  &[id="task-view"] {
+    padding-top: 130px;
+
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
+}

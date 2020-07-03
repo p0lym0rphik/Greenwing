@@ -1,0 +1,264 @@
+#board-container {
+  margin: 0 -15px -25px -15px;
+  overflow-x: inherit;
+
+  @media (max-width: 767px) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin: 0;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 10px 0;
+
+    @media (max-width: 767px) {
+      border-spacing: 1px 0;
+    }
+
+    .board-column-header {
+      &::before {
+        content: "";
+        height: 16px;
+        background-color: $default-bg-color;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 129px;
+        z-index: 10;
+
+        @media (max-width: 767px) {
+          content: none;
+        }
+      }
+
+      .board-add-icon {
+        margin: 0 5px;
+        float: none;
+        padding: 0;
+
+        i {
+          &:before {
+            content: "+";
+            display: block;
+            font-weight: 300;
+            font-size: 1.4rem;
+          }
+
+          &:hover,
+          &:focus {
+            color: white;
+          }
+        }
+      }
+
+      .action-container {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        > .btn {
+          padding: 0;
+          width: auto;
+          height: auto;
+
+          a {
+            width: 26px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+
+            .dots-menu__icon {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+
+      .board-column-title {
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .task-count {
+        background-color: #e3e8ee;
+        padding: 3px 5px;
+        font-weight: 500;
+        margin: 0 10px;
+        border-radius: 3px;
+        font-size: 0.8rem;
+
+        &.task-count-limit {
+          background-color: $danger-color;
+          color: white;
+        }
+      }
+
+      .board-column-expanded {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    th.board-column-header.board-column-header-collapsed,
+    td.board-column-task-collapsed {
+      padding: 0px;
+      width: 40px;
+      min-width: 40px;
+
+      .board-add-icon {
+        display: none;
+      }
+    }
+
+    tr {
+      border-radius: 5px;
+
+      &[id^="swimlane-"] {
+        th.board-swimlane-header {
+          top: 145px;
+          position: sticky;
+          z-index: 10;
+
+          @media (max-width: 767px) {
+            top: 0;
+            position: relative;
+          }
+        }
+
+        ~ tr[class^="board-swimlane-columns-"] {
+          th.board-column-header {
+            top: 194px;
+
+            @media (max-width: 767px) {
+              top: 0;
+            }
+          }
+        }
+      }
+
+      th {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        padding: 10px;
+        border: 0 none;
+
+        &.board-column-header {
+          position: sticky;
+          top: 145px;
+          z-index: 10;
+
+          @media (max-width: 767px) {
+            top: 0;
+            position: relative;
+          }
+        }
+      }
+
+      td {
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 0 10px 10px;
+      }
+
+      td {
+        background-color: $default-bg-color-2;
+        border-style: none;
+      }
+
+      th:not(.board-swimlane-header) {
+        background-color: $default-bg-color-3;
+        border-style: none;
+        border-bottom: 1px solid white;
+      }
+
+      .board-swimlane-header {
+        background-color: $default-bg-color;
+
+        a {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    &.first-swimlane-table {
+      z-index: 10;
+      margin-bottom: 0;
+      position: sticky;
+      top: 145px;
+
+      @media (max-width: 767px) {
+        position: relative;
+        top: 0;
+      }
+
+      &::before {
+        content: "";
+        height: 49px;
+        background-color: $default-bg-color;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 145px;
+        z-index: -10;
+
+        @media (max-width: 767px) {
+          content: none;
+        }
+      }
+
+      ~ table {
+        .board-column-header {
+          top: 194px;
+
+          @media (max-width: 767px) {
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .board-task-list {
+      margin-top: 10px;
+    }
+
+    .board-column-header-task-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e3e8ee;
+      padding: 3px;
+      font-weight: 500;
+      margin: 0 5px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+
+      &[class^="board-column-header-task-count swimlane-task-count-"] {
+        display: inline-block;
+        padding: 5px 8px;
+      }
+    }
+
+    .board-column-collapsed {
+      .btn-circle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .board-rotation-wrapper {
+      display: flex;
+      padding: 0;
+      left: 50%;
+      overflow: unset;
+      min-height: 450px;
+
+      .board-column-title.board-rotation {
+        transform-origin: 0 50%;
+        transform: rotate(90deg);
+        height: 100%;
+      }
+    }
+  }
+}

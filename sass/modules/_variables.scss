@@ -1,0 +1,91 @@
+$default-radius: 5px;
+
+$task-colors: (
+  "yellow": #fbda38,
+  "blue": #4694ff,
+  "green": #4ba975,
+  "purple": #856be2,
+  "red": #ff2a2a,
+  "orange": #fb9531,
+  "grey": #a09c9c,
+  "brown": #ab6333,
+  "deep_orange": #e66e0b,
+  "dark_grey": #737373,
+  "pink": #f546d5,
+  "teal": #49b1c1,
+  "cyan": #49cce0,
+  "lime": #5fc55f,
+  "light_green": #4af74a,
+  "amber": #f1d042
+);
+
+.color-picker-square.color- {
+  border: 1px solid $default-border-color;
+}
+
+@each $name, $hex in $task-colors {
+  .color-picker-square.color-#{$name} {
+    background-color: $hex;
+  }
+  li.task-tag {
+    background-color: lighten(black, 80);
+    color: #777a7d;
+
+    &.color-#{$name} {
+      border-style: none;
+      color: $hex;
+      background-color: lighten($hex, 30);
+    }
+  }
+
+  .board-task-list .task-board.color-#{$name} {
+    border-top: 3px solid $hex;
+    &:hover,
+    &:focus {
+      border-top-color: darken($hex, 10);
+    }
+  }
+  .task-board-category.color-#{$name} {
+    border-style: none;
+    background-color: lighten($hex, 30);
+
+    a {
+      color: $hex;
+    }
+
+    .tooltip .fa-info-circle {
+      color: $hex;
+      font-size: 0.8rem;
+    }
+  }
+  .table-list .table-list-row.color-#{$name} {
+    border-left: 5px solid $hex;
+
+    &:hover,
+    &:focus {
+      border-left-color: darken($hex, 10);
+    }
+  }
+
+  .table-list-category {
+    background-color: lighten(black, 90);
+    color: #777a7d;
+
+    &.table-list-category.color-#{$name} {
+      background-color: lighten($hex, 30);
+      border-style: none;
+      color: $hex;
+
+      a {
+        color: $hex;
+      }
+    }
+  }
+
+  .task-summary-title.color-#{$name} img {
+    background-color: $hex;
+  }
+  .page > #main > .project-header.color-#{$name} {
+    border-bottom: 3px solid $hex;
+  }
+}

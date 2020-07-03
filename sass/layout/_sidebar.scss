@@ -1,0 +1,102 @@
+.sidebar-container {
+  padding: 0;
+  margin: 0 -15px;
+
+  &[id="dashboard"] .sidebar,
+  &[id="user-section"] .sidebar {
+    top: 125px;
+    max-height: calc(100vh - 150px);
+
+    @media (max-width: 767px) {
+      top: 0;
+      max-height: initial;
+    }
+  }
+
+  &[id="config-section"] .sidebar {
+    top: 75px;
+    max-height: calc(100vh - 100px);
+
+    @media (max-width: 767px) {
+      top: 0;
+      max-height: initial;
+    }
+  }
+
+  &[id="task-view"] .sidebar {
+    top: 145px;
+    max-height: calc(100vh - 170px);
+
+    @media (max-width: 767px) {
+      top: 0;
+      max-height: initial;
+    }
+  }
+}
+
+.sidebar {
+  padding: 0 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow-y: auto;
+  top: 0;
+
+  @media (max-width: 767px) {
+    position: relative;
+    order: 1;
+    max-width: 100%;
+  }
+
+  ul {
+    li {
+      padding-left: 0;
+      border-left: 3px solid #e2eefe;
+      border-bottom-color: $default-border-color;
+      border-bottom: 0 none;
+      line-height: initial;
+
+      a {
+        color: inherit;
+        display: block;
+        padding: 8px 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        i {
+          display: none;
+        }
+      }
+
+      &.active,
+      &:hover,
+      &:focus {
+        padding-left: 0;
+        border-left-color: $default-color;
+        border-left: 3px solid;
+
+        a,
+        a:hover,
+        a:focus {
+          color: inherit;
+          background-color: lighten($default-color, 65%);
+        }
+      }
+
+      &.active {
+        a {
+          background-color: lighten($default-color, 60%);
+          font-weight: 500;
+
+          &:hover {
+            background-color: lighten($default-color, 60%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-content {
+  padding: 0 15px;
+  max-width: 100%;
+}

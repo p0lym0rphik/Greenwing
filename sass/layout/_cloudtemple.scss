@@ -1,0 +1,35 @@
+header {
+  .title {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .logo {
+    background-image: url("https://www.cloud-temple.com/wp-content/themes/cloudtemple/src/assets/images/logo-CT.svg");
+    background-size: 29px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    width: 39px;
+    height: 29px;
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+      opacity: 0;
+      padding-right: 10px;
+      margin-right: 10px;
+
+      &:hover {
+        opacity: 0;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

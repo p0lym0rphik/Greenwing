@@ -1,0 +1,72 @@
+.activity-event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 15px;
+  border-bottom: 1px solid #ccdcf3;
+
+  &:last-child {
+    border-bottom: 1px solid #ccdcf3;
+  }
+
+  .avatar-left {
+    margin-right: 15px;
+  }
+
+  .activity-content {
+    margin-left: 0;
+    width: 100%;
+
+    .activity-title {
+      color: $default-color;
+      border-bottom: 0 none;
+      display: flex;
+      font-weight: 500;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      a {
+        margin: 0 5px;
+        text-transform: uppercase;
+
+        @media (max-width: 767px) {
+          margin: 0;
+        }
+      }
+
+      .activity-date {
+        color: $default-text-color;
+        margin-left: auto;
+
+        @media (max-width: 767px) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .activity-description {
+      color: $default-color;
+
+      ul {
+        margin-top: 0;
+        margin-left: 35px;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $default-bg-color-1;
+  }
+
+  &:nth-child(even) {
+    background-color: #fafcff;
+
+    &:hover,
+    &:focus {
+      background-color: $default-bg-color-1;
+    }
+  }
+}

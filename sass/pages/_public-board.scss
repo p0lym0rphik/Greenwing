@@ -1,0 +1,16 @@
+.public-board {
+
+  #board-container {
+    padding-top: 0;
+
+    table tr th.board-column-header {
+      position: sticky;
+      top: 5px;
+
+      &::before {
+        height: 5px;
+        top: 0;
+      }
+    }
+  }   
+}

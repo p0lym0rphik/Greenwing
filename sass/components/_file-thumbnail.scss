@@ -1,0 +1,28 @@
+.file-thumbnail {
+  .js-image-slideshow-rendered {
+    margin-bottom: 5px;
+  }
+
+  .file-thumbnail-content {
+    .file-thumbnail-title .dropdown a {
+      color: $default-color;
+
+      i {
+        color: #afafaf;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: black;
+
+        i {
+          color: black;
+        }
+      }
+    }
+
+    .file-thumbnail-description {
+      color: $default-color;
+    }
+  }
+}

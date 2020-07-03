@@ -1,0 +1,55 @@
+.input-addon {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+
+  .input-addon-field {
+    flex: 1 1 auto;
+    width: 1% !important;
+    margin-bottom: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .input-addon-item {
+    padding: 0;
+    display: flex;
+    background-color: darken($default-bg-color, 2);
+
+    &:not(:first-child) {
+      margin-left: -1px;
+      border-left: 1px solid $default-border-color;
+      border-color: $default-border-color;
+    }
+
+    .dropdown {
+      a.dropdown-menu,
+      a.active-dropdown-menu {
+        color: $default-color;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 10px;
+
+        .fa.fa-caret-down {
+          color: $default-color;
+        }
+
+        &:hover,
+        &:focus {
+          color: black;
+
+          .fa.fa-caret-down {
+            color: black;
+          }
+        }
+
+        i:first-child {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}

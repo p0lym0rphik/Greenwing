@@ -1,0 +1,88 @@
+label {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+
+}
+
+input:not(.select2-search__field):not([type="checkbox"]):not([name="notifications_filter"]):not([name="positionChoice"]),
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="text"]:not(.input-addon-field),
+textarea,
+select {
+  margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid $default-border-color;
+  border-radius: 5px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  max-width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: inherit;
+  
+  &:focus {
+    color: #495057;
+    background-color: white;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+}
+
+input#form-avatar {
+  border: 0 none;
+  background-color: initial;
+}
+
+textarea {
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+.form-inline {
+  label[for="form-owner_id"] {
+    display: inherit;
+  }
+}
+
+.form-required {
+  padding-left: 0;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+  display: block;
+  color: #de4545;
+
+  &::after {
+    content: 'Field required';
+    margin-left: 8px;
+  }
+}
+
+.js-submit-buttons-rendered {
+  margin-bottom: 1rem;
+}
+
+input#form-avatar {
+  padding-left: 0;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.form-errors {
+  margin-bottom: 1rem;
+}
+

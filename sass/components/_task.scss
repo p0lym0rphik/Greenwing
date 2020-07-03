@@ -1,0 +1,22 @@
+.task-list-avatars {
+
+  .task-board-change-assignee {
+
+    &:hover,
+    &:focus {
+      opacity: unset;
+    }
+  }
+}
+
+.task-list-icons {
+
+  span {
+
+    &.tooltip {
+
+      i.fa.fa-file-text-o {
+      }
+    }
+  }
+}

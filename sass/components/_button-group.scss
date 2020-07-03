@@ -1,0 +1,60 @@
+.views-switcher-component {
+  .views {
+    margin-right: 0;
+    margin-top: 0;
+
+    a {
+      color: $default-color;
+    }
+
+    li {
+      padding: 0;
+      display: inline-block;
+      border: 0 none;
+
+      &:not(:first-child){
+        margin-left: -5px;
+      }
+
+      &.active {
+        a {
+          background-color: $primary-color;
+          border-color: $primary-color;
+          color: white;
+
+          .fa {
+            color: white;
+          }
+        }
+      }
+
+      a {
+        padding: 0.375rem 0.75rem;
+        line-height: 1.5;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid $default-border-color;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+
+        .fa {
+          margin-right: 5px;
+          color: $default-color;
+        }
+      }
+
+      &:first-child a {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &:last-child a {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+}
