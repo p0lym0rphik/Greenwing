@@ -28,7 +28,7 @@ https://github.com/kanboard/kanboard
 
 ## Requirements
 
-Kanboard >= v1.3.1
+Kanboard >= v1.2
 
 ## Installation guide
 
