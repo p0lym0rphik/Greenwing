@@ -129,3 +129,31 @@ input[name=DueDate_Board_Dividers] {
 .task-date-overdue {
   color: #b94a48 !important;
 }
+
+//Compatibility with BigBoard plugin
+#bigboard {
+  margin: 0 20px;
+
+  #main {
+    #board-container {
+      padding-top: 15px;
+
+      #board {
+        .board-column-header {
+          top: 75px;
+          z-index: 9;
+
+          &::before {
+            top: 59px;
+          }
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      .header h1 {
+        margin-top: 40px;
+      }
+    }
+  }
+}
