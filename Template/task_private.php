@@ -82,7 +82,7 @@
 
             <?php if (! empty($task['tags'])): ?>
                 <div class="task-tags">
-                    <h4><?= t('Tags'); ?></h4>
+                    <!-- <h4><?= t('Tags'); ?></h4> -->
                     <ul>
                     <?php foreach ($task['tags'] as $tag): ?>
                         <li class="task-tag <?= $tag['color_id'] ? "color-{$tag['color_id']}" : '' ?>"><?= $this->text->e($tag['name']) ?></li>

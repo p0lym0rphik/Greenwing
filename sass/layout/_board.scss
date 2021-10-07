@@ -82,7 +82,7 @@
       }
 
       .task-count {
-        background-color: #e3e8ee;
+        background-color: darken($board-tasks-bg, 3);
         padding: 3px 5px;
         font-weight: 500;
         margin: 0 10px;
@@ -143,6 +143,7 @@
         border-top-left-radius: 5px;
         padding: 10px;
         border: 0 none;
+        color: $default-dark-color;
 
         &.board-column-header {
           position: sticky;
@@ -163,14 +164,14 @@
       }
 
       td {
-        background-color: $default-bg-color-2;
+        background-color: $board-column-bg;
         border-style: none;
       }
 
       th:not(.board-swimlane-header) {
-        background-color: $default-bg-color-3;
+        background-color: $board-column-bg;
         border-style: none;
-        border-bottom: 1px solid white;
+        // border-bottom: 1px solid white;
       }
 
       .board-swimlane-header {

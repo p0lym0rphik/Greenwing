@@ -291,12 +291,12 @@ header {
     }
 
     i {
-      color: $default-color;
+      color: $default-dark-color;
     }
 
     &:hover {
       i {
-        color: black;
+        color: $primary-color;
       }
     }
   }

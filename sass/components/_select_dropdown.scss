@@ -18,15 +18,15 @@
 header {
   .select-dropdown-input-container {
     background-color: transparent;
-    border: 1px solid #0050c7;
+    border: 1px solid #3A4556;
 
     .select-dropdown-chevron {
-      color: #0050c7;
+      color: white;
     }
 
     input.select-dropdown-input {
       border: 1px solid #0050c7;
-      background-color: #031a38 !important;
+      background-color: $default-bg-color !important;
       color: white !important;
     }
   }

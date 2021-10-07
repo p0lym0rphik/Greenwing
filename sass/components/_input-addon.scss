@@ -11,38 +11,42 @@
     margin-bottom: 0 !important;
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+    border-color: $board-tasks-bg !important;
+    background-color: $default-bg-color !important;
+    color: White !important;
   }
 
   .input-addon-item {
     padding: 0;
     display: flex;
-    background-color: darken($default-bg-color, 2);
+    background-color: $board-column-bg;
 
     &:not(:first-child) {
       margin-left: -1px;
-      border-left: 1px solid $default-border-color;
-      border-color: $default-border-color;
+      border-left: 1px solid $board-tasks-bg;
+      border-color: $board-tasks-bg;
     }
 
     .dropdown {
       a.dropdown-menu,
       a.active-dropdown-menu {
-        color: $default-color;
+        color: $default-dark-color;
         display: flex;
         align-items: center;
         height: 100%;
         padding: 0 10px;
 
         .fa.fa-caret-down {
-          color: $default-color;
+          color: $default-dark-color;
         }
 
         &:hover,
         &:focus {
-          color: black;
+          color: $default-dark-color;
+          background-color: $primary-color;
 
           .fa.fa-caret-down {
-            color: black;
+            color: white;
           }
         }
 

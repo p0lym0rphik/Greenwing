@@ -2,7 +2,7 @@
   .task-board {
     margin-bottom: 10px;
     border-style: none;
-    background-color: white;
+    background-color: $board-tasks-bg;
     transition: box-shadow 0.3s;
     padding: 0;
     overflow: hidden;
@@ -15,7 +15,7 @@
 
       .dropdown {
         .dropdown-menu strong {
-          color: $default-color;
+          color: $primary-color;
 
           i {
             color: #afafaf;
@@ -30,12 +30,12 @@
 
       a.js-modal-large {
         margin-left: auto;
-        background-color: $default-bg-color;
+        background-color: $board-tasks-bg;
         text-align: center;
         width: 30px;
         height: 30px;
         font-size: 18px;
-        color: $default-color;
+        color: $default-dark-color;
         border-radius: 50%;
         transition: color 0.3s, background-color 0.3s;
 
@@ -57,6 +57,9 @@
       margin-top: 0;
       margin-bottom: 10px;
       padding: 2px 10px 5px;
+      a {
+        color: $default-dark-color;
+      }
     }
 
     .task-board-category-container,
@@ -87,8 +90,8 @@
 
     .task-tags {
       padding: 10px;
-      border-top: 1px solid $task-board-meta-border-color;
-      background-color: $task-board-meta-bg-color;
+      // border-top: 1px solid $task-board-meta-border-color;
+      // background-color: $task-board-meta-bg-color;
 
       li.task-tag {
         border: 0 none;
@@ -100,11 +103,11 @@
     .task-board-icons {
       margin-top: 0;
       text-align: left;
-      border-top: 1px solid $task-board-meta-border-color;
+      // border-top: 1px solid $task-board-meta-border-color;
       padding: 10px;
       display: flex;
       align-items: center;
-      background-color: $task-board-meta-bg-color;
+      background-color: darken($board-tasks-bg, 3);
 
       .task-board-icons-row {
         margin-bottom: 5px;
@@ -114,7 +117,7 @@
         a {
           margin: 0 5px 0 0;
           padding: 0 5px 0 0;
-          color: $default-color;
+          color: $default-dark-color;
 
           .fa.fa-comments-o {
             margin-right: 3px;

@@ -1,4 +1,4 @@
-$default-bg-color: #fafcff;
+$default-bg-color: #1A202C;
 $default-bg-color-1: darken($default-bg-color, 1);
 $default-bg-color-2: darken($default-bg-color, 2);
 $default-bg-color-3: darken($default-bg-color, 3);
@@ -26,3 +26,8 @@ $secondary-color: #628bc5;
 
 $task-board-meta-border-color: #e1e8f5;
 $task-board-meta-bg-color: #fbfbfb;
+
+$board-column-bg: #3A4556;
+$board-tasks-bg: #4A5568;
+
+$default-dark-color: #FFFFFF;
