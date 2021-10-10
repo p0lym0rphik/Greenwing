@@ -14,15 +14,15 @@
     }
   }
   .task-summary-container {
-    border: 1px solid $default-border-color;
-    background-color: white;
+    border: 1px solid $board-tasks-bg;
+    background-color: $board-column-bg;
     padding: 15px;
 
     .task-summary-columns {
       margin: 0 -15px;
 
       .task-summary-column {
-        color: inherit;
+        color: $default-dark-color;
         padding: 0 15px;
       }
 
@@ -31,7 +31,7 @@
       }
 
       span {
-        color: $default-color;
+        color: $default-dark-color;
       }
     }
 

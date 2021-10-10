@@ -5,10 +5,10 @@
 
     a {
       margin-left: 10px;
-      color: $default-color;
+      color: $primary-color;
 
       &:hover {
-        color: black;
+        color: $default-dark-color;
       }
     }
 
@@ -42,8 +42,9 @@
           margin-right: 15px;
         }
 
+        .comment-username,
         .comment-date {
-          color: $default-text-color;
+          color: $default-dark-color;
         }
       }
 
@@ -52,11 +53,13 @@
 
         .fa.fa-cog {
           margin-right: 3px;
+          color: $default-dark-color;
         }
       }
 
       .comment-content {
         margin-left: 0;
+        color: $default-dark-color;
 
         .markdown p:last-child {
           margin-bottom: 0;
