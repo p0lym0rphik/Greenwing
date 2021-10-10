@@ -237,7 +237,7 @@ header {
       }
 
       a {
-        color: initial;
+        color: $default-dark-color;
         text-decoration: none;
         font-size: 0.9rem;
         line-height: 45px;
@@ -251,12 +251,12 @@ header {
 
         &:hover,
         &:focus {
-          background-color: darken($default-bg-color-1, 3);
+          background-color: $board-column-bg;
         }
 
         i.fa {
           margin-right: 8px;
-          color: $default-bg-color-15;
+          color: $default-dark-color;
         }
       }
 

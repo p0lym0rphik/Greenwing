@@ -144,7 +144,7 @@
 
     .table-list-details ~ .task-list-avatars {
       display: flex;
-      border-top: 1px solid #ccdcf3;
+      border-top: 1px solid lighten($board-tasks-bg, 10);
       padding: 5px 10px;
       float: none;
 
@@ -186,7 +186,7 @@
 
     .table-list-icons,
     .task-list-icons {
-      border-top: 1px solid $default-border-color;
+      border-top: 1px solid lighten($board-tasks-bg, 10);
       line-height: initial;
       padding: 5px 10px;
       display: flex;

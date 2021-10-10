@@ -50,13 +50,13 @@
   ul {
     li {
       padding-left: 0;
-      border-left: 3px solid #e2eefe;
+      border-left: 3px solid lighten($board-tasks-bg, 15%);
       border-bottom-color: $default-border-color;
       border-bottom: 0 none;
       line-height: initial;
 
       a {
-        color: inherit;
+        color: $default-dark-color;
         display: block;
         padding: 8px 10px;
         border-top-right-radius: 5px;
@@ -72,23 +72,23 @@
       &:focus {
         padding-left: 0;
         border-left-color: $default-color;
-        border-left: 3px solid;
+        border-left: 3px solid $board-column-bg;
 
         a,
         a:hover,
         a:focus {
-          color: inherit;
-          background-color: lighten($default-color, 65%);
+          color: $default-dark-color;
+          background-color: lighten($board-tasks-bg, 15%);
         }
       }
 
       &.active {
         a {
-          background-color: lighten($default-color, 60%);
+          background-color: $board-tasks-bg;
           font-weight: 500;
 
           &:hover {
-            background-color: lighten($default-color, 60%);
+            background-color: $board-tasks-bg;
           }
         }
       }
