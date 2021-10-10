@@ -1,6 +1,7 @@
 #dropdown {
   .dropdown-submenu-open {
-    border-color: $default-border-color;
+    border-color: lighten($board-tasks-bg, 10);
+    background-color: $board-tasks-bg;
 
     .color-picker-square {
       padding-right: 10px;
@@ -13,13 +14,13 @@
 
     a,
     i {
-      color: $default-color;
+      color: $default-dark-color;
     }
 
     li {
       display: flex;
       align-items: center;
-      border-color: $default-bg-color;
+      border-color: lighten($board-tasks-bg, 10);
 
       strong {
         justify-content: center;
@@ -29,7 +30,7 @@
         &:hover,
         &:focus {
           color: inherit;
-          background-color: $default-bg-color-2;
+          background-color: darken($board-tasks-bg, 10);
         }
       }
     }

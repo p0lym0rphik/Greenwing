@@ -47,6 +47,7 @@
   #modal-content {
     padding: 0;
 
+
     .page-header {
       ul {
         margin: 0 0 -15px -15px;
@@ -57,6 +58,7 @@
     }
     form {
       padding: 15px;
+      background-color: $default-bg-color;
 
       #form-title {
         width: 97%;
@@ -130,10 +132,16 @@
       input#form-filter,
       input#form-role,
       input#form-emails,
+      input#form-identifier,
+      input#form-task_limit,
+      input#form-src_project_id,
       input#form-subject {
         width: 97%;
         display: inline;
         margin-right: 10px;
+        background-color: $default-bg-color;
+        border-color: $board-tasks-bg;
+        color: $default-dark-color;
 
         @media (max-width: 767px) {
           width: 94%;
@@ -205,8 +213,8 @@
 
     .page-header {
       padding: 20px 15px;
-      background-color: $default-bg-color;
-      border-bottom: 1px solid $default-border-color;
+      background-color: $default-bg-color-4;
+      border-bottom: 1px solid $default-bg-color-2;
       position: sticky;
       top: 0;
       z-index: 1;
