@@ -1,19 +1,19 @@
 .table-list {
   margin-bottom: 1rem;
-  background-color: white;
+  background-color: $default-bg-color;
 
   .table-list-header {
     padding: 15px;
     line-height: initial;
     display: flex;
     border-radius: 0;
-    background-color: $default-bg-color-2;
-    border-color: $default-border-color;
+    background-color: $board-column-bg;
+    border-color: lighten($board-tasks-bg, 10);
     border-top-left-radius: $default-radius;
     border-top-right-radius: $default-radius;
 
     .table-list-header-count {
-      color: $default-text-color;
+      color: $default-dark-color;
     }
 
     .list-item-links a {
@@ -33,14 +33,14 @@
       }
 
       a {
-        color: $default-color;
+        color: $default-dark-color;
 
         &:hover,
         &:focus {
-          color: black;
+          color: $primary-color;
 
           i {
-            color: black;
+            color: $primary-color;
           }
         }
       }
@@ -54,12 +54,13 @@
   .table-list-row {
     padding: 0;
     border-radius: 0;
-    border-color: $default-border-color;
+    border-color: lighten($board-tasks-bg, 10);
+    background-color: $board-tasks-bg;
 
     &:hover,
     &:focus {
-      background-color: $default-bg-color;
-      border-color: $default-border-color;
+      background-color: lighten($board-tasks-bg, 4);
+      border-color: lighten($board-tasks-bg, 10);
     }
 
     .table-list-wrapper {
@@ -83,11 +84,14 @@
       .table-list-title {
         display: inline;
         padding: 0;
+        a{
+          color: $default-dark-color;
+        }
       }
     }
 
     &.table-border-left {
-      border-color: $default-border-color;
+      border-color: lighten($board-tasks-bg, 10);
     }
 
     .dropdown {
@@ -110,12 +114,13 @@
       }
     }
     .table-list-details {
-      color: $default-text-color;
+      color: $default-dark-color;
       padding: 5px 10px;
-      border-top: 1px solid $default-border-color;
+      border-top: 1px solid lighten($board-tasks-bg, 10);
+      background-color: darken($board-tasks-bg, 3);
 
       strong {
-        color: $default-text-color;
+        color: $primary-color;
       }
 
       &.table-list-details-with-icons {
@@ -144,7 +149,7 @@
       float: none;
 
       .task-avatar-assignee {
-        color: $default-text-color;
+        color: $default-dark-color;
       }
 
       .task-board-change-assignee {
@@ -164,7 +169,7 @@
     .task-list-icons a,
     .task-list-icons span,
     .task-list-icons i {
-      color: $default-text-color;
+      color: $default-dark-color;
     }
 
     span.task-icon-age-total {

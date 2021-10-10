@@ -18,7 +18,7 @@
     width: 100%;
 
     .activity-title {
-      color: $default-color;
+      color: $default-dark-color;
       border-bottom: 0 none;
       display: flex;
       font-weight: 500;
@@ -35,9 +35,13 @@
           margin: 0;
         }
       }
+      a:hover,
+      a:focus {
+        color: $default-dark-color;
+      }
 
       .activity-date {
-        color: $default-text-color;
+        color: $primary-color;
         margin-left: auto;
 
         @media (max-width: 767px) {
@@ -47,7 +51,7 @@
     }
 
     .activity-description {
-      color: $default-color;
+      color: $default-dark-color;
 
       ul {
         margin-top: 0;
@@ -58,15 +62,15 @@
 
   &:hover,
   &:focus {
-    background-color: $default-bg-color-1;
+    background-color: $board-column-bg;
   }
 
   &:nth-child(even) {
-    background-color: #fafcff;
+    background-color: $default-bg-color;
 
     &:hover,
     &:focus {
-      background-color: $default-bg-color-1;
+      background-color: $board-column-bg;
     }
   }
 }

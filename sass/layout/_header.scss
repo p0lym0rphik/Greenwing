@@ -1,5 +1,5 @@
 header {
-  background-color: $default-bg-color-85;
+  background-color: $default-bg-color-10;
   padding: 0 15px;
   border-bottom: 0;
   margin-bottom: 0;
@@ -195,7 +195,7 @@ header {
 .page > #main {
   > .page-header,
   > .project-header {
-    background-color: $default-bg-color-1;
+    background-color: $default-bg-color-4;
     border-bottom: 1px solid $default-bg-color-5;
   }
 }
@@ -205,7 +205,7 @@ header {
     border-bottom: 0;
     font-weight: 300;
     padding: 1rem 0;
-    color: $default-color;
+    color: $default-dark-color;
 
     ~ ul {
       margin: 0;
@@ -214,11 +214,11 @@ header {
     }
 
     a {
-      color: $default-color;
+      color: $primary-color;
 
       &:hover,
       &:focus {
-        color: black;
+        color: $default-dark-color;
         text-decoration: none;
       }
     }

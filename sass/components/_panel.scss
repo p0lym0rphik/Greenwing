@@ -1,7 +1,7 @@
 .panel {
-  border-color: $default-border-color;
-  background-color: white;
-  color: inherit;
+  border-color: $board-tasks-bg;
+  background-color: $board-column-bg;
+  color: $default-dark-color;
   padding: 15px;
 
   .no-bullet {

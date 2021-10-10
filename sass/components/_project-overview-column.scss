@@ -8,10 +8,10 @@
     margin: 0 10px 15px;
     padding: 0;
     display: flex;
-    background-color: white;
+    background-color: $board-column-bg;
     padding: 25px 15px;
     border-radius: 5px;
-    border: 1px solid $default-border-color;
+    border: 1px solid $board-tasks-bg;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -33,7 +33,7 @@
     }
 
     small {
-      color: rgba($primary-color, 0.6);
+      color: white;
       margin-bottom: 5px;
       font-size: 16px;
       transition: color 0.3s;
