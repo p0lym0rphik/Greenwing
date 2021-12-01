@@ -1,5 +1,5 @@
 header {
-  background-color: $default-bg-color-10;
+  background-color: $header-bg-color-dark;
   padding: 0 15px;
   border-bottom: 0;
   margin-bottom: 0;
@@ -195,7 +195,7 @@ header {
 .page > #main {
   > .page-header,
   > .project-header {
-    background-color: $default-bg-color-4;
+    background-color: $header-project-bg-color-dark;
     border-bottom: 1px solid $default-bg-color-5;
   }
 }

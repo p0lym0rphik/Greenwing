@@ -1,4 +1,4 @@
-$default-bg-color: #1A202C;
+$default-bg-color: #323743;
 $default-bg-color-1: darken($default-bg-color, 1);
 $default-bg-color-2: darken($default-bg-color, 2);
 $default-bg-color-3: darken($default-bg-color, 3);
@@ -28,7 +28,18 @@ $secondary-color: #628bc5;
 $task-board-meta-border-color: #e1e8f5;
 $task-board-meta-bg-color: #fbfbfb;
 
-$board-column-bg: #3A4556;
-$board-tasks-bg: #4A5568;
+$board-column-bg: #272B34;
+$board-tasks-bg: #4F555F;
 
 $default-dark-color: #FFFFFF;
+
+$header-bg-color-dark: #151A24;
+$header-project-bg-color-dark: #272B34;
+
+$prject-topbar-bg-color-dark:rgba(255,255,255,.2);
+
+$yellow-dark:rgba(255,178,43,.3);
+$blue-dark:rgba(30,136,229,.3);
+// $grey-dark:rgba(108,117,125,.3);
+
+$board-tasks-edit-bg:rgba(255, 255, 255,.1);

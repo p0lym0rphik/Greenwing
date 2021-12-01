@@ -30,7 +30,7 @@
 
       a.js-modal-large {
         margin-left: auto;
-        background-color: $board-tasks-bg;
+        background-color: $board-tasks-edit-bg;
         text-align: center;
         width: 30px;
         height: 30px;
@@ -107,7 +107,7 @@
       padding: 10px;
       display: flex;
       align-items: center;
-      background-color: darken($board-tasks-bg, 3);
+      // background-color: darken($board-tasks-bg, 3);
 
       .task-board-icons-row {
         margin-bottom: 5px;

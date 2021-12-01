@@ -1,13 +1,13 @@
 $default-radius: 5px;
 
 $task-colors: (
-  "yellow": #fbda38,
-  "blue": #4694ff,
+  "yellow": rgba(255,178,43,.3),
+  "blue": rgba(30,136,229,.3),
   "green": #4ba975,
   "purple": #856be2,
-  "red": #ff2a2a,
+  "red": rgba(252,75,108,.3),
   "orange": #fb9531,
-  "grey": #a09c9c,
+  "grey": rgba(108,117,125,.3),
   "brown": #ab6333,
   "deep_orange": #e66e0b,
   "dark_grey": #737373,
@@ -39,7 +39,8 @@ $task-colors: (
   }
 
   .board-task-list .task-board.color-#{$name} {
-    border-top: 3px solid $hex;
+    background: $hex;
+    border: 1px solid lighten($hex, 30);
     &:hover,
     &:focus {
       border-top-color: darken($hex, 10);
