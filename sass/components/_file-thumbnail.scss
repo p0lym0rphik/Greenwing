@@ -5,24 +5,24 @@
 
   .file-thumbnail-content {
     .file-thumbnail-title .dropdown a {
-      color: $default-color;
+      color: $primary-color;
 
       i {
-        color: #afafaf;
+        color: white;
       }
 
       &:hover {
         text-decoration: none;
-        color: black;
+        color: $default-dark-color;
 
         i {
-          color: black;
+          color: white;
         }
       }
     }
 
     .file-thumbnail-description {
-      color: $default-color;
+      color: $default-dark-color;
     }
   }
 }
