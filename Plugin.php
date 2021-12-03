@@ -42,8 +42,8 @@ class Plugin extends Base {
 		$this->template->setTemplateOverride( 'password_reset/create', 'Greenwing:password_reset' );
 		$this->template->setTemplateOverride( 'project_header/search', 'Greenwing:search' );
 		$this->template->setTemplateOverride( 'board/view_private', 'Greenwing:view_private' );
-		$this->template->setTemplateOverride( 'project_header/views', 'Greenwing:project_header/views' );		
-		$this->template->setTemplateOverride( 'plugin/show', 'Greenwing:plugin/show' );		
+		$this->template->setTemplateOverride( 'project_header/views', 'Greenwing:project_header/views' );
+		$this->template->setTemplateOverride( 'plugin/show', 'Greenwing:plugin/show' );
 
 		$this->container['colorModel'] = $this->container->factory( function ( $c ) {
 			return new ColorModel( $c );
@@ -75,7 +75,7 @@ class Plugin extends Base {
 	}
 
 	public function getPluginVersion() {
-		return '1.3.0';
+		return '1.3.2';
 	}
 
 	public function getPluginHomepage() {
@@ -83,6 +83,6 @@ class Plugin extends Base {
 	}
 
 	public function getPluginDescription() {
-		return t( 'This plugin add a new stylesheet and override default styles.' );
+		return t( 'This plugin adds a new stylesheet and overrides default styles.' );
 	}
 }
