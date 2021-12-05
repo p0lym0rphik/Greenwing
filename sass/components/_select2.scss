@@ -16,14 +16,19 @@ span.select2-container {
       color: inherit;
     }
 
+    .select2-results{
+      background-color: $default-bg-color;
+    }
+
     .select2-selection--multiple,
     .select2-selection--single {
       border: 1px solid $default-border-color;
       min-height: calc(1.5em + 0.75rem + 2px);
       line-height: 1.5;
+      background-color: $default-bg-color;
 
       .select2-selection__choice {
-        background-color: white;
+        background-color: $default-bg-color;
         border-color: $default-border-color;
         margin-top: 0;
         margin-bottom: 5px;
@@ -44,7 +49,7 @@ span.select2-container {
         top: 5px;
 
         b {
-          border-color: $default-color transparent transparent transparent;
+          border-color: $default-dark-color transparent transparent transparent;
         }
       }
     }
@@ -74,6 +79,7 @@ span.select2-container {
   height: auto;
   display: flex;
   align-items: center;
+  color: $default-dark-color;
 }
 
 .color-picker-label {
