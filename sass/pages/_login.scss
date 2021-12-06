@@ -8,9 +8,10 @@
 
   form {
     padding: 2rem;
-    background-color: white;
+    background-color: inherit;
     border-radius: 5px;
-    box-shadow: 0px 15px 15px 5px rgba(187, 218, 247, .25);
+    // box-shadow: 0px 15px 15px 5px rgba(187, 218, 247, .25);
+    border: 1px solid $board-tasks-bg;
 
     a {
       color: inherit;
@@ -32,6 +33,10 @@
 
       button {
         width: 100%;
+        background-color: #539bff;
+        color: #fff;
+        border-color: #539bff;
+
       }
     }
 

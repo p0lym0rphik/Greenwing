@@ -1,4 +1,6 @@
 #modal-box {
+  // background: none;
+  background: $default-bg-color;
   .alert {
     margin: 15px;
     border-radius: 5px;
@@ -289,4 +291,8 @@
       }
     }
   }
+}
+
+#modal-overlay {
+  background: rgba(0,0,0,0.5);
 }

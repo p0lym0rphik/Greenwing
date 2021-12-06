@@ -34,9 +34,12 @@ header {
 
 #select-dropdown-menu {
   overflow: auto;
+  background: $default-bg-color;
+  border-color: $board-tasks-bg;
 
   .select-dropdown-menu-item {
-    color: $default-color;
+    color: $default-dark-color;
+    border-color: $board-tasks-bg;
 
     &.active {
       background-color: $default-bg-color-2;

@@ -101,7 +101,7 @@
     .table-list-details-wrapper {
       display: flex;
       align-items: center;
-      border-top: 1px solid $default-border-color;
+      border-top: 1px solid lighten($board-tasks-bg, 10);
 
       .table-list-details {
         border-top: 0 none;

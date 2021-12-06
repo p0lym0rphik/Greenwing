@@ -157,3 +157,28 @@ input[name=DueDate_Board_Dividers] {
     }
   }
 }
+
+//Datepicker dark
+.ui-widget.ui-widget-content {
+  border: 1px solid #c5c5c5;
+  background: $default-bg-color;
+}
+
+.ui-datepicker .ui-datepicker-header{
+  background: $board-column-bg;
+  color: $default-dark-color;
+}
+
+.ui-widget-header {
+  border: 1px solid #ddd;
+}
+
+.ui-timepicker-div dl {
+  color: white;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+  border: 1px solid $default-border-color;
+  background: #f6f6f6;
+  color: #454545;
+}

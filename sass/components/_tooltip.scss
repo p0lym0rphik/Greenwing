@@ -1,9 +1,10 @@
 #tooltip-container {
   z-index: 10;
   box-shadow: 0 3px 20px rgba($primary-color, 0.2);
-  border: 1px solid $default-border-color;
+  border: 1px solid $board-tasks-bg;
   padding: 6px 10px;
   font-size: 14px;
+  background: $default-bg-color;
 
   &:before {
     content: "";
