@@ -3,7 +3,8 @@
   align-items: center;
   margin-bottom: 0;
   padding: 15px;
-  border-bottom: 1px solid #ccdcf3;
+  border-bottom: 1px solid $board-column-bg;
+  background-color: $default-bg-color;
 
   &:last-child {
     border-bottom: 1px solid #ccdcf3;
