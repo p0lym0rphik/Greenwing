@@ -1,16 +1,32 @@
 .public-board {
-
+  
   #board-container {
     padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 
     table tr th.board-column-header {
       position: sticky;
-      top: 5px;
-
+      top: 50px !important;
       &::before {
         height: 5px;
         top: 0;
       }
     }
-  }   
+
+    tr {
+      &[id^="swimlane-"] {
+        th.board-swimlane-header {
+          top: 5px;
+        }
+      }
+    }
+
+    table.first-swimlane-table {
+      top: 5px;
+      &::before{
+        top: 5px;
+      }   
+    }
+  }
 }
