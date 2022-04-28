@@ -126,7 +126,7 @@
                         <?php if ($task['date_started']): ?>
                             <span><?= $this->dt->datetime($task['date_started']) ?></span>
                         <?php elseif ($editable): ?>
-                            <span><?= $this->url->link(t('Start now'), 'TaskModificationController', 'start', ['task_id' => $task['id'], 'project_id' => $task['project_id']]) ?></span>
+                            <span><?= $this->url->link(t('Start now'), 'TaskModificationController', 'start', ['task_id' => $task['id'], 'project_id' => $task['project_id'], 'csrf_token' => $this->app->getToken()->getReusableCSRFToken()]) ?></span>
                         <?php endif ?>
                     </li>
                     <li>
