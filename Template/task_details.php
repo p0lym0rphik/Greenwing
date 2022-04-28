@@ -88,7 +88,7 @@
                         <?php endif ?>
                         </span>
                         <?php if ($editable && $task['owner_id'] != $this->user->getId()): ?>
-                            - <span><?= $this->url->link(t('Assign to me'), 'TaskModificationController', 'assignToMe', ['task_id' => $task['id'], 'project_id' => $task['project_id']]) ?></span>
+                            - <span><?= $this->url->link(t('Assign to me'), 'TaskModificationController', 'assignToMe', ['task_id' => $task['id'], 'project_id' => $task['project_id'], 'csrf_token' => $this->app->getToken()->getReusableCSRFToken()]) ?></span>
                         <?php endif ?>
                     </li>
                     <?php if ($task['creator_username']): ?>
